@@ -25,6 +25,8 @@ textarea {
 
 #results {
   font-size: 24px;
+  font-family: monospace;
+  margin-bottom: 20px;
 }
 
 #tracker {
