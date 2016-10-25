@@ -9,3 +9,16 @@
 .incorrect {
   color: red;
 }
+
+textarea {
+  width: 75%;
+  text-align: left;
+}
+
+#input, #guess, #results {
+  text-align: center;
+}
+
+#results {
+  font-size: 24px;
+}

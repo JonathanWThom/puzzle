@@ -24,7 +24,6 @@ $(document).ready(function(){
     event.preventDefault();
     originalSentence = $("#sentence").val();
     dashedSentence = toDashes(originalSentence);
-    console.log(dashedSentence);
 
     $("#input").hide();
     $("#guess").show();
