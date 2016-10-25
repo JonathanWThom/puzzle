@@ -30,10 +30,19 @@
           <br>
           <textarea id="userGuess" type="text" autocomplete="off"></textarea>
         </div>
-        <button type="submit" class="btn">Submit</button>
+        <button id="submitButton" type="submit" class="btn">Submit</button>
       </form>
 
-      <button id="reset" class="btn">Enter a new sentence</button>
+      <div class="newSentence">
+        <button id="reset" class="btn">Enter a new sentence</button>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 score">
+          <h4>Your score:</h4><br>
+          <span id="tracker"></span>
+        </div>
+      </div>
     </div><!-- div container-->
   </body>
 </html>

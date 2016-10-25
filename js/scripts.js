@@ -1,6 +1,7 @@
 //
 var originalSentence;
 var vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"];
+var winTracker = 0;
 
 function toDashes(userSentence) {
   for (letter = 0; letter < userSentence.length; letter++) {
@@ -10,12 +11,6 @@ function toDashes(userSentence) {
       }
     });
   }
-  // vowels.forEach(function(vowel) {
-  //   if (userSentence.indexOf(vowel) != -1) {
-  //     userSentence = userSentence.replace(vowel, "-");
-  //     //userSentence = tempSentence;
-  //   }
-  // });
   return userSentence;
 }
 
@@ -38,17 +33,23 @@ $(document).ready(function(){
       $("#results").removeClass("incorrect");
       $("#results").addClass("correct");
       $("#reset").show();
+      winTracker++;
+      $("#tracker").text(winTracker);
+      $("#submitButton").hide();
+      $("#guess").hide();
     } else {
       $("#results").addClass("incorrect");
     }
   });
 
   $("#reset").click(function(){
-    originalSentence = "";
     $("#results").removeClass("incorrect");
     $("#results").removeClass("correct");
     $("#input").show();
-    $("#results").hide();
+    $("#results").text("");
     $("#guess").hide();
+    $("#submitButton").show();
+    $("#reset").hide();
+    $("textarea").prop("value", "");
   });
 });

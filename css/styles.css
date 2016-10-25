@@ -2,6 +2,10 @@
   display: none;
 }
 
+body {
+  background-color: lightblue;
+}
+
 .correct {
   color: green;
 }
@@ -15,10 +19,15 @@ textarea {
   text-align: left;
 }
 
-#input, #guess, #results {
+#input, #guess, #results, .score, .jumbotron, .newSentence {
   text-align: center;
 }
 
 #results {
   font-size: 24px;
+}
+
+#tracker {
+  color: green;
+  font-size: 30px;
 }
