@@ -19,11 +19,37 @@ function toDashes(userSentence) {
   return userSentence;
 }
 
-$(document).ready(function() {
+$(document).ready(function(){
   $("#input").submit(function(event){
     event.preventDefault();
-    var originalSentence = $("#sentence").val();
+    originalSentence = $("#sentence").val();
     dashedSentence = toDashes(originalSentence);
     console.log(dashedSentence);
+
+    $("#input").hide();
+    $("#guess").show();
+    $("#results").text(dashedSentence);
+  });
+
+  $("#guess").submit(function(event){
+    event.preventDefault();
+    var userGuess = $("#userGuess").val();
+    if (userGuess === originalSentence) {
+      $("#results").text(originalSentence);
+      $("#results").removeClass("incorrect");
+      $("#results").addClass("correct");
+      $("#reset").show();
+    } else {
+      $("#results").addClass("incorrect");
+    }
+  });
+
+  $("#reset").click(function(){
+    originalSentence = "";
+    $("#results").removeClass("incorrect");
+    $("#results").removeClass("correct");
+    $("#input").show();
+    $("#results").hide();
+    $("#guess").hide();
   });
 });

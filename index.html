@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
     <title></title>
@@ -14,16 +15,16 @@
       <button type="submit">Submit</button>
     </form>
 
-    <div class="results"></div>
-
-
+    <div id="results"></div>
 
     <form id="guess">
       <div class="form-group">
         <label>Guess the sentence</label>
-        <input id="userGuess" type="text">
+        <input id="userGuess" type="text" autocomplete="off">
       </div>
       <button type="submit">Submit</button>
     </form>
+
+    <button id="reset">Enter a new sentence</button>
   </body>
 </html>
